@@ -69,9 +69,15 @@
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
+        margin-bottom: 1rem;
         
         &::after {
             background-color: $color-white;
+        }
+
+        &:hover,
+        &:active {
+            box-shadow: none;
         }
     }
 

@@ -64,6 +64,8 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
                 clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1 {
             background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url("../img/nat-5.jpg");
@@ -161,7 +163,6 @@
     }
 
     //BACK SIDE STYLING
-    
     &__cta {
         position: absolute;
         top: 50%;
