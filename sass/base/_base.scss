@@ -12,5 +12,29 @@
 
 html {
     // This defines what 1rem is
-    font-size: 62.5%;
+    font-size: 62.5%; //1rem = 10px, 10 / 16 = 0.625
+
+    @include respond(tablet-protrait) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%;
+        overflow-x: hidden;
+    }
+
+    @include respond(tablet-landscape) {
+        font-size: 56.25%; //1rem = 9px, 9/16 = 50%;
+        overflow-x: hidden;
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16 = 75%;
+        overflow-x: hidden;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tablet-protrait) {
+        padding: 0;
+    }
 }

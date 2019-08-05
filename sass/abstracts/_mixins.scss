@@ -13,3 +13,42 @@
     transform: translate($translateX, $translateY) scale($scale);
     overflow: hidden;
 }
+
+// MEDIA QUERY MANAGER
+/*
+    0 -> 600px:             Phone
+    600px -> 900px:         Tablet portrait
+    900px -> 1200px:        Table landscape
+    [1200px - > 1800px]:    Normal style
+    1800px + :              Big desktop
+
+    $breakpoint arguement choices:
+        -   phone
+        -   tablet-protrait
+        -   tablet-landscape
+        -   desktop : not breakpoint
+        -   big-desktop
+
+        1em = 16px (default);
+
+    ORDER: Base + typograph > general layout + grid > page layout > components.
+*/
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content; }     //600px
+    }
+
+    @if $breakpoint == tablet-protrait {
+        @media (max-width: 56.25em) { @content; }     //900px
+    }
+
+    @if $breakpoint == tablet-landscape {
+        @media (max-width: 75em) { @content; }    //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content; }    //1800px
+    }
+}
