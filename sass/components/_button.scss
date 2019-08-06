@@ -1,4 +1,19 @@
 .btn {
+
+    @include respond(tablet-landscape) {
+        &--responsive { 
+            padding: 0.5rem 4rem !important;
+        }
+    }
+
+    @include respond(tablet-protrait) {
+        &--responsive {
+
+            margin-bottom: 1rem;
+            padding: 0.5rem 4rem !important;
+        }
+    }
+
     &,
     &:link,
     &:visited {

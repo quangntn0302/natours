@@ -68,6 +68,12 @@ body {
         font-size: 2.5rem;
     }
 
+    @include respond(tablet-landscape) {
+        &--responsive {
+            font-size: 2.5rem;
+        }
+    }
+
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -82,6 +88,12 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond(tablet-landscape) {
+        &--responsive {
+            font-size: 1.3rem;
+        }
+    }
 }
 
 .paragraph {
@@ -91,3 +103,6 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+
+

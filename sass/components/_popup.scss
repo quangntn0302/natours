@@ -1,4 +1,6 @@
 .popup {
+
+
     position: fixed;
     top: 0;
     left: 0;
@@ -56,6 +58,12 @@
         display: table-cell;
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
+        
+        @include respond(tablet-protrait) {
+            width: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 
     &__right {
@@ -63,11 +71,17 @@
         display: table-cell;
         vertical-align: middle;
         padding: 0rem 5rem;
+
+        
+        @include respond(tablet-protrait) {
+            width: 100%;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
     }
 
     &__text {
@@ -82,5 +96,18 @@
 
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
+
+        @include respond(tablet-landscape) {
+            & { 
+               font-size: 1rem;
+            }
+        }
+
+        @include respond(tablet-protrait) {
+            font-size: 1rem;
+            column-count: none;
+            column-gap: 0;
+            column-rule: none;
+        }
     }
 }
