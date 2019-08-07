@@ -11,7 +11,7 @@ body {
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
-    backface-visibility: hidden;
+    backface-visibility: hidden; //Ẩn, mặt sau ẩn so với mặt trước
     -webkit-backface-visibility: hidden;
     margin-bottom: 6rem;
 
